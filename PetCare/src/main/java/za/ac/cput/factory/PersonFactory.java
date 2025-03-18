@@ -6,7 +6,8 @@ import za.ac.cput.domain.Contact;
 import za.ac.cput.util.Helper;
 
 public class PersonFactory {
-    public static Person createPerson(String name, Contact contact, Address address) {
+    public static Person createPerson(String id, String name, Contact contact, Address address) {
+        if (Helper.isNullOrEmpty(id)) return null;
         if (Helper.isNullOrEmpty(name)) return null;
         if (contact == null) return null;
         if (address == null) return null;
