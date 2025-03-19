@@ -37,9 +37,9 @@ public class PersonRepository implements IPersonRepository {
     }
 
     @Override
-    public Person read(String id) {
+    public Person read(String name) {
         for (Person person : people) {
-            if (person.getId().equals(id)) {
+            if (person.getName().equals(name)) {
                 return person;
             }
         }
@@ -48,15 +48,15 @@ public class PersonRepository implements IPersonRepository {
 
     @Override
     public Person update(Person person) {
-        Person oldPerson = read(person.getId());
-        delete(oldPerson.getId());
+        Person oldPerson = read(person.getName());
+        delete(oldPerson.getName());
         create(person);
         return null;
     }
 
     @Override
-    public Person delete(String id) {
-        Person person = read(id);
+    public Person delete(String name) {
+        Person person = read(name);
         if (people.remove(person)) {
             return person;
         }
