@@ -14,6 +14,5 @@ Contributions are welcome! Follow these steps:
 4. Push to the branch (`git push origin feature-branch`).
 5. Open a Pull Request.
 
-
-
-
+## UML class diagram
+![VetClassDiagram drawio](https://github.com/user-attachments/assets/b2c0774e-e86e-416d-aa07-090d0af63804)
