@@ -15,4 +15,4 @@ Contributions are welcome! Follow these steps:
 5. Open a Pull Request.
 
 ## UML class diagram
-![Uploading WhatsApp Image 2025-03-10 at 20.05.39_1a9e00da.jpg…]()
+![WhatsApp Image 2025-03-10 at 20 05 38_bf586864](https://github.com/user-attachments/assets/0c05d5c3-27eb-4644-9c08-ba7646f84558)
