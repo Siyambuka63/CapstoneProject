@@ -15,4 +15,4 @@ Contributions are welcome! Follow these steps:
 5. Open a Pull Request.
 
 ## UML class diagram
-![VetClassDiagram drawio](https://github.com/user-attachments/assets/b2c0774e-e86e-416d-aa07-090d0af63804)
+![Uploading WhatsApp Image 2025-03-10 at 20.05.39_1a9e00da.jpg…]()
