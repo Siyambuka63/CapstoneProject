@@ -1,12 +1,18 @@
+/* Payment.java
+Payment model class
+Author: Siyambuka Mbali (230594646)
+Date: 23 March 2025
+*/
+
 package za.ac.cput.domain;
 
 public class Payment {
     private double amount;
     private String paymentType;
 
-    public Payment() {}
+    private Payment() {}
 
-    public Payment(Builder builder){
+    private Payment(Builder builder){
         this.amount = builder.amount;
         this.paymentType = builder.paymentType;
     }
@@ -26,8 +32,6 @@ public class Payment {
                 ", paymentType='" + paymentType + '\'' +
                 '}';
     }
-
-
 
     public static class Builder {
         private double amount;
