@@ -15,6 +15,9 @@ public class Helper {
 
     public static boolean isAmountValid(double amount) {return amount > 0;}
 
+    public static boolean isPaymentTypeValid(String type) {
+        return (type.equalsIgnoreCase("cash") || type.equalsIgnoreCase("credit") || type.equalsIgnoreCase("debit"));
+    }
 
 }
 

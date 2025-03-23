@@ -1,3 +1,9 @@
+/* Person.java
+Person model class
+Author: Siyambuka Mbali (230594646)
+Date: 23 March 2025
+*/
+
 package za.ac.cput.domain;
 
 public class Person {

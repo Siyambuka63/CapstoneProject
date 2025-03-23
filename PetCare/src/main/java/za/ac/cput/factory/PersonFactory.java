@@ -1,3 +1,9 @@
+/* PersonFactory.java
+Person factory class
+Author: Siyambuka Mbali (230594646)
+Date: 23 March 2025
+*/
+
 package za.ac.cput.factory;
 
 import za.ac.cput.domain.Person;
