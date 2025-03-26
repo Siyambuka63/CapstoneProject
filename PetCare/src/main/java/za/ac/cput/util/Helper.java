@@ -4,6 +4,11 @@ public class Helper {
     public static boolean isNullOrEmpty(String s) {
         return s == null || s.isEmpty();
     }
+    public static boolean isNullorEmpty(String str) {
+        if (str.isEmpty() || str == null)
+            return true;
+        return false;
+    }
     public static boolean isIDValid(String id) {
         try {
             Integer.parseInt(id);
