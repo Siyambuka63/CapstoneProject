@@ -32,7 +32,7 @@ public class Payment {
                 ", paymentType='" + paymentType + '\'' +
                 '}';
     }
-
+    //Builder
     public static class Builder {
         private double amount;
         private String paymentType;

@@ -1,5 +1,9 @@
 package za.ac.cput.domain;
 
+/* Appointment model class
+Author: Oluhle Makhaye (222419636)
+*/
+
 import java.time.LocalDate;
 import java.time.LocalTime;
 
@@ -7,8 +11,8 @@ public class Appointment {
     private LocalDate date;
     private LocalTime time;
     private Payment payment;
-    /*private Pet pet;
-    private Veterinarian veterinarian;*/
+    //private Pet pet;
+    private Veterinarian veterinarian;
 
 public Appointment(){}
 
@@ -17,7 +21,7 @@ public Appointment(){}
         this.time = builder.time;
         this.payment = builder.payment;
         //this.pet = builder.pet;
-       // this.veterinarian = builder.veterinarian;
+        this.veterinarian = builder.veterinarian;
 
     }
 
@@ -35,11 +39,11 @@ public Appointment(){}
 
      /*   public Pet getPet() {
             return pet;
-        }
+        }*/
 
         public Veterinarian getVeterinarian() {
             return veterinarian;
-        } */
+        }
 
     @Override
     public String toString() {
@@ -47,6 +51,7 @@ public Appointment(){}
                 "date=" + date +
                 ", time=" + time +
                 ", payment=" + payment +
+                "veterinarian=" + veterinarian +
                 '}';
     }
 
@@ -66,7 +71,7 @@ public Appointment(){}
         private LocalTime time;
         private Payment payment;
        // private Pet pet;
-        //private veterinarian veterinarian;
+        private Veterinarian veterinarian;
 
         public Builder setDate(LocalDate date) {
             this.date = date;
@@ -86,12 +91,12 @@ public Appointment(){}
       /*  public Builder setPet(Pet pet) {
             this.pet = pet;
             return this;
-        }
+        }*/
 
         public Builder setVeterinarian(Veterinarian veterinarian) {
             this.veterinarian = veterinarian;
             return this;
-        } */
+        }
 
     }
 }
