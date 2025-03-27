@@ -7,6 +7,9 @@ public class Helper {
     public static boolean isNullOrEmpty(String s) {
         return s == null || s.isEmpty();
     }
+    public static boolean isNull(Object o) {
+        return o == null ;
+    }
     public static boolean isIDValid(String id) {
         try {
             Integer.parseInt(id);
@@ -29,6 +32,7 @@ public class Helper {
     public static boolean isValidTime(LocalTime time) {
         return time != null && time.isAfter(LocalTime.MIN) && time.isBefore(LocalTime.MAX);
     }
+    public static boolean isAgeValid(int i) {return i > 0;}
 
 }
 
