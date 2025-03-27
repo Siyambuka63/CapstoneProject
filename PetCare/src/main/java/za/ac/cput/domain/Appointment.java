@@ -1,5 +1,9 @@
 package za.ac.cput.domain;
 
+/* Appointment model class
+Author: Oluhle Makhaye (222419636)
+*/
+
 import java.time.LocalDate;
 import java.time.LocalTime;
 
@@ -7,8 +11,8 @@ public class Appointment {
     private LocalDate date;
     private LocalTime time;
     private Payment payment;
-    /*private Pet pet;
-    private Veterinarian veterinarian;*/
+    private Pet pet;
+    private Veterinarian veterinarian;
 
 public Appointment(){}
 
@@ -16,8 +20,8 @@ public Appointment(){}
         this.date = builder.date;
         this.time = builder.time;
         this.payment = builder.payment;
-        //this.pet = builder.pet;
-       // this.veterinarian = builder.veterinarian;
+        this.pet = builder.pet;
+        this.veterinarian = builder.veterinarian;
 
     }
 
@@ -33,24 +37,15 @@ public Appointment(){}
             return payment;
         }
 
-     /*   public Pet getPet() {
+        public Pet getPet() {
             return pet;
         }
 
         public Veterinarian getVeterinarian() {
             return veterinarian;
-        } */
+        }
 
-    @Override
-    public String toString() {
-        return "Appointment{" +
-                "date=" + date +
-                ", time=" + time +
-                ", payment=" + payment +
-                '}';
-    }
-
-    /* @Override
+     @Override
     public String toString() {
         return "Appointment{" +
                 "date=" + date +
@@ -59,14 +54,14 @@ public Appointment(){}
                 ", pet=" + pet +
                 ", veterinarian=" + veterinarian +
                 '}';
-    }*/
+    }
 
     public static class Builder {
         private LocalDate date;
         private LocalTime time;
         private Payment payment;
-       // private Pet pet;
-        //private veterinarian veterinarian;
+        private Pet pet;
+        private Veterinarian veterinarian;
 
         public Builder setDate(LocalDate date) {
             this.date = date;
@@ -83,7 +78,7 @@ public Appointment(){}
             return this;
         }
 
-      /*  public Builder setPet(Pet pet) {
+        public Builder setPet(Pet pet) {
             this.pet = pet;
             return this;
         }
@@ -91,7 +86,10 @@ public Appointment(){}
         public Builder setVeterinarian(Veterinarian veterinarian) {
             this.veterinarian = veterinarian;
             return this;
-        } */
+        }
 
+        public Appointment build() {
+            return new Appointment(this);
+        }
     }
 }
