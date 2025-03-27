@@ -2,6 +2,7 @@ package za.ac.cput.factory;
 
 import za.ac.cput.domain.Appointment;
 import za.ac.cput.domain.Payment;
+import za.ac.cput.domain.Pet;
 import za.ac.cput.domain.Veterinarian;
 import za.ac.cput.util.Helper;
 
