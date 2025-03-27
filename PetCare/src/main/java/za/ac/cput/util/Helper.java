@@ -4,6 +4,9 @@ public class Helper {
     public static boolean isNullOrEmpty(String s) {
         return s == null || s.isEmpty();
     }
+    public static boolean isNull(Object o) {
+        return o == null ;
+    }
     public static boolean isIDValid(String id) {
         try {
             Integer.parseInt(id);
@@ -18,6 +21,7 @@ public class Helper {
     public static boolean isPaymentTypeValid(String type) {
         return (type.equalsIgnoreCase("cash") || type.equalsIgnoreCase("credit") || type.equalsIgnoreCase("debit"));
     }
+    public static boolean isAgeValid(int i) {return i > 0;}
 
 }
 
