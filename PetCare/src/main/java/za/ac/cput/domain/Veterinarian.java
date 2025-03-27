@@ -38,7 +38,7 @@ public int getVeterinarianId() {
         private List appointments;
 
 
-        public Builder setVeterinarianId(int veterinarianId) { //remove void place Builder to return Builder object
+        public Builder setVeterinarianId(int veterinarianId) {
             this.veterianrianId = veterinarianId;
             return this;
         }
