@@ -15,6 +15,7 @@ public class Contact {
         this.email = builder.email;
     }
 
+
     public String getContactId() {
         return contactId;
     }
@@ -54,5 +55,3 @@ public class Contact {
         }
     }
 }
-
-
