@@ -1,6 +1,6 @@
 /* Payment.java
 Payment model class
-Author: Siyambuka Mbali (230594646)
+Author: Siyambuka Mbali (230594646), Oluhle Makhaye (222419636)
 Date: 23 March 2025
 */
 
@@ -32,7 +32,7 @@ public class Payment {
                 ", paymentType='" + paymentType + '\'' +
                 '}';
     }
-
+    //Builder
     public static class Builder {
         private double amount;
         private String paymentType;
