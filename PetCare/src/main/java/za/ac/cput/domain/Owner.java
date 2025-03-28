@@ -1,11 +1,8 @@
 package za.ac.cput.domain;
 
-import java.security.Permissions;
-import java.util.ArrayList;
-
 public class Owner {
     private String pets;
-    private String index;
+    private Integer index;
 
     private Owner() {
     }
@@ -19,7 +16,7 @@ public class Owner {
         return pets;
     }
 
-    public String getIndex() {
+    public Integer getIndex() {
         return index;
     }
 
@@ -34,13 +31,13 @@ public class Owner {
 
     public static class Builder {
         private String pets;
-        private String index;
+        private Integer index;
 
         public Builder setPets(String pets) {
             this.pets = pets;
             return this;
         }
-        public Builder setIndex(String index) {
+        public Builder setIndex(Integer index) {
             this.index = index;
             return this;
         }
