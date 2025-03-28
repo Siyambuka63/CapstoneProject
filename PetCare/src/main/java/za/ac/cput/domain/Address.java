@@ -1,3 +1,8 @@
+/*
+Address.java
+Address class
+Author: Nkheso Mathebula 230762883
+*/
 package za.ac.cput.domain;
 
 public class Address {
@@ -6,6 +11,7 @@ public class Address {
     private String town;
     private String city;
     private String postalCode;
+
 
 
     private Address(Builder builder) {
@@ -21,18 +27,22 @@ public class Address {
     }
 
     public String getStreetName() {
+
         return streetName;
     }
 
     public String getTown() {
+
         return town;
     }
 
     public String getCity() {
+
         return city;
     }
 
     public String getPostalCode() {
+
         return postalCode;
     }
 
