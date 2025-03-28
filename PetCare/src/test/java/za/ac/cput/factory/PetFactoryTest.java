@@ -12,7 +12,11 @@ import java.util.List;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
-//ToDo add owner
+/* PetFactoryTest.java
+PetFactoryTest model class
+Author: Sinovuyo Mathungana (230143725)
+Date: 28 March 2025
+ */
 class PetFactoryTest {
     ArrayList<MedicalRecord> medicalList = new ArrayList<>(Collections.singletonList(
             MedicalRecordFactory.createMedicalRecord("Tuberculosis", "Antibiotics tablet")));

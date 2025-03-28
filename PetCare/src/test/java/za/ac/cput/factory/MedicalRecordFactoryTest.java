@@ -5,7 +5,11 @@ import za.ac.cput.domain.MedicalRecord;
 import za.ac.cput.domain.Payment;
 
 import static org.junit.jupiter.api.Assertions.*;
-
+/* MedicalRecordFactoryTest.java
+MedicalRecordFactoryTest model class
+Author: Sinovuyo Mathungana (230143725)
+Date: 28 March 2025
+ */
 class MedicalRecordFactoryTest {
     private MedicalRecord medicalRecordWithoutDiagnosis = MedicalRecordFactory.createMedicalRecord("","Cold medicine");
     private MedicalRecord medicalRecordWithoutTreatment = MedicalRecordFactory.createMedicalRecord("Flu","");

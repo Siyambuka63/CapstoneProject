@@ -6,7 +6,11 @@ import za.ac.cput.domain.Pet;
 import za.ac.cput.util.Helper;
 
 import java.util.ArrayList;
-
+/* PetFactory.java
+PetFactory model class
+Author: Sinovuyo Mathungana (230143725)
+Date: 28 March 2025
+ */
 public class PetFactory {
   public static Pet createPet(Owner owner,
                               String name,
@@ -14,7 +18,7 @@ public class PetFactory {
                               String species,
                               int age,
                               ArrayList<MedicalRecord> medicalRecord){
-      //if (Helper.isNull(owner)) return null;
+      if (Helper.isNull(owner)) return null;
       if (Helper.isNullOrEmpty(name)) return null;
       if (Helper.isNullOrEmpty(breed)) return null;
       if (Helper.isNullOrEmpty(species)) return null;
