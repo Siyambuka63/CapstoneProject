@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class Owner {
     private String pets;
-    private Integer index;
+    private String index;
 
     private Owner() {
     }
@@ -19,7 +19,7 @@ public class Owner {
         return pets;
     }
 
-    public Integer getIndex() {
+    public String getIndex() {
         return index;
     }
 
@@ -34,13 +34,13 @@ public class Owner {
 
     public static class Builder {
         private String pets;
-        private Integer index;
+        private String index;
 
         public Builder setPets(String pets) {
             this.pets = pets;
             return this;
         }
-        public Builder setIndex(Integer index) {
+        public Builder setIndex(String index) {
             this.index = index;
             return this;
         }

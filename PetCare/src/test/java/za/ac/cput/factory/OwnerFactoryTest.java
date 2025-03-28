@@ -14,7 +14,7 @@ class OwnerFactoryTest {
 
     @Test
     public void testCreatePets(){
-        assertNotNull(pets);
+        assert pets != null;
         System.out.println(pets);
     }
     @Test
