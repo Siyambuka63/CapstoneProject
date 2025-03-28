@@ -2,6 +2,7 @@ package za.ac.cput.domain;
 
 /* Appointment model class
 Author: Oluhle Makhaye (222419636)
+Date: 28 March 2025
 */
 
 import java.time.LocalDate;

@@ -1,5 +1,9 @@
 package za.ac.cput.repository;
 
+/* AppointmentRepositoryTest
+author: Oluhle Makhaye (222419636)
+Date: 28 March 2025*/
+
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import za.ac.cput.domain.*;

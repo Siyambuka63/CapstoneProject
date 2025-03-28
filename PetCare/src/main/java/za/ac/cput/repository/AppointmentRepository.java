@@ -1,5 +1,9 @@
 package za.ac.cput.repository;
 
+/*AppointmentRepository class
+Author: Oluhle Makhaye (222419636)
+Date: 28 March 2025*/
+
 import za.ac.cput.domain.Appointment;
 import za.ac.cput.domain.Payment;
 

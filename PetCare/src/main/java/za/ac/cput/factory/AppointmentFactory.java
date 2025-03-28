@@ -1,6 +1,9 @@
 package za.ac.cput.factory;
+
 /*Appointment Factory
-Author: Oluhle Makhaye (222419636)*/
+Author: Oluhle Makhaye (222419636)
+Date: 28 March 2025*/
+
 import za.ac.cput.domain.Appointment;
 import za.ac.cput.domain.Payment;
 import za.ac.cput.domain.Pet;
