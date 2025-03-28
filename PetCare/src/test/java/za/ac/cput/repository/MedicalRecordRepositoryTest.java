@@ -7,7 +7,11 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import za.ac.cput.domain.MedicalRecord;
 import za.ac.cput.factory.MedicalRecordFactory;
-
+/* MedicalRecordRepositoryTest.java
+MedicalRecordRepository model class
+Author: Sinovuyo Mathungana (230143725)
+Date: 28 March 2025
+ */
 @TestMethodOrder(MethodOrderer.MethodName.class)
 class MedicalRecordRepositoryTest {
     private static  MedicalRecordRepository repository = MedicalRecordRepository.getRepository() ;

@@ -3,7 +3,11 @@ package za.ac.cput.repository;
 import za.ac.cput.domain.MedicalRecord;
 import java.util.ArrayList;
 import java.util.List;
-
+/* MedicalRecordRepository.java
+MedicalRecordRepository model class
+Author: Sinovuyo Mathungana (230143725)
+Date: 28 March 2025
+ */
 public class MedicalRecordRepository implements IRepository<MedicalRecord,String> {
     private static MedicalRecordRepository repository;
 

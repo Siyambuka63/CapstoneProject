@@ -1,4 +1,9 @@
 package za.ac.cput.domain;
+/* MedicalRecord.java
+MedicalRecord model class
+Author: Sinovuyo Mathungana (230143725)
+Date: 28 March 2025
+ */
 
 public class MedicalRecord {
     private String  diagnosis;

@@ -3,7 +3,11 @@ package za.ac.cput.repository;
 import za.ac.cput.domain.Pet;
 import java.util.ArrayList;
 import java.util.List;
-
+/* PetRepository.java
+PetRepository model class
+Author: Sinovuyo Mathungana (230143725)
+Date: 28 March 2025
+ */
 public class PetRepository implements IRepository<Pet, String>{
     private static PetRepository repository = null;
 

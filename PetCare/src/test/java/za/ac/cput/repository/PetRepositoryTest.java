@@ -13,6 +13,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 import static org.junit.jupiter.api.Assertions.*;
+/* PetRepositoryTest.java
+PetRepositoryTest model class
+Author: Sinovuyo Mathungana (230143725)
+Date: 28 March 2025
+ */
 @TestMethodOrder(MethodOrderer.MethodName.class)
 class PetRepositoryTest {
   private static  PetRepository repository = PetRepository.getRepository();

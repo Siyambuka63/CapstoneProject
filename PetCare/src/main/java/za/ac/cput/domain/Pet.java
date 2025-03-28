@@ -1,7 +1,11 @@
 package za.ac.cput.domain;
 
 import java.util.ArrayList;
-
+/* Pet.java
+Pet model class
+Author: Sinovuyo Mathungana (230143725)
+Date: 28 March 2025
+ */
 public class Pet {
     private  Owner owner;
     private  String name;
