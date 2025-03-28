@@ -23,7 +23,8 @@ class PetRepositoryTest {
   private static  PetRepository repository = PetRepository.getRepository();
   private ArrayList<MedicalRecord> medicalList = new ArrayList<>(Collections.singletonList(
           MedicalRecordFactory.createMedicalRecord("Tuberculosis", "Antibiotics tablet")));
-  private Pet pets = PetFactory.createPet(null,"Jimmy","Pit Bull","Dog",5,medicalList);
+  Owner owner = OwnerFactory.createPets("Dog");
+  private Pet pets = PetFactory.createPet(owner,"Jimmy","Pit Bull","Dog",5,medicalList);
     @Test
     void a_create() {
       Pet pet = repository.create(pets);
