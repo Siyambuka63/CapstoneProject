@@ -1,6 +1,6 @@
 /* PaymentFactory.java
 Payment factory class
-Author: Siyambuka Mbali (230594646)
+Author: Siyambuka Mbali (230594646), Oluhle Makhaye (222419636)
 Date: 23 March 2025
 */
 

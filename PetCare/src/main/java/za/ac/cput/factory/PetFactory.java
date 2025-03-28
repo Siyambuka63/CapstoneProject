@@ -12,7 +12,7 @@ Author: Sinovuyo Mathungana (230143725)
 Date: 28 March 2025
  */
 public class PetFactory {
-  public static Pet createPet(Owner owner,
+  public static Pet createPet(String owner,
                               String name,
                               String breed,
                               String species,
