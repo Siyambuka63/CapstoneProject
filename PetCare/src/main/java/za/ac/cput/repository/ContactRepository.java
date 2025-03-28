@@ -1,3 +1,8 @@
+/*
+ContactRepository.java
+Contact repository class
+Author: Nkheso Mathebula 230762883
+*/
 package za.ac.cput.repository;
 
 import za.ac.cput.domain.Contact;

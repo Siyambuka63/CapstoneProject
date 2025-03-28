@@ -1,6 +1,9 @@
 /*
+Contact.java
+Contact class
 Author: Nkheso Mathebula 230762883
 */
+
 package za.ac.cput.domain;
 
 public class Contact {

@@ -1,3 +1,8 @@
+/*
+ContactRepositoryTest.java
+Contact repository test class
+Author: Nkheso Mathebula 230762883
+*/
 package za.ac.cput.repository;
 
 import org.junit.jupiter.api.*;
@@ -13,7 +18,7 @@ class ContactRepositoryTest {
 
     private static ContactRepository contactRepository = ContactRepository.getRepository();
 
-    private static Contact contact = ContactFactory.createContact("0836431131", "angu@gmail.com", "0604357200");
+    private static Contact contact = ContactFactory.createContact("0836431131", "angu@gmail.com");
 
     @Test
     @Order(1)
@@ -41,7 +46,6 @@ class ContactRepositoryTest {
                 .setContactId(contact.getContactId())
                 .setPhoneNumber("0836431131")
                 .setEmail("angu@gmail.com.com")
-                .setAlternateNumber("0604357200")
                 .build();
         Contact result = contactRepository.update(updatedContact);
         assertNotNull(result);

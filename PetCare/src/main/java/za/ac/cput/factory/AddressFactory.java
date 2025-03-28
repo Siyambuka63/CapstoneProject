@@ -1,3 +1,8 @@
+/*
+AddressFactory.java
+Address factory class
+Author: Nkheso Mathebula 230762883
+*/
 package za.ac.cput.factory;
 
 import za.ac.cput.domain.Address;
