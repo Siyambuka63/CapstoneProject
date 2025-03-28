@@ -1,6 +1,8 @@
-//Athenkosi Mekana
-//222319437
-//Veterinarian Domain Class
+/* Veterinarian.java
+Veterinarian domain class
+Author: Athenkosi Mekana(222319437)
+Date: 28 March 2025
+ */
 
 package za.ac.cput.domain;
 import java.util.List;

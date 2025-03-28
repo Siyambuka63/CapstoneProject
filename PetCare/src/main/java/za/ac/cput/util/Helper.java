@@ -1,14 +1,13 @@
 package za.ac.cput.util;
 
-import java.time.LocalDate;
-import java.time.LocalTime;
-
 public class Helper {
     public static boolean isNullOrEmpty(String s) {
         return s == null || s.isEmpty();
     }
-    public static boolean isNull(Object o) {
-        return o == null ;
+    public static boolean isNullorEmpty(String str) {
+        if (str.isEmpty() || str == null)
+            return true;
+        return false;
     }
     public static boolean isIDValid(String id) {
         try {
@@ -21,18 +20,9 @@ public class Helper {
 
     public static boolean isAmountValid(double amount) {return amount > 0;}
 
-    public static boolean isPaymentTypeValid(String paymentType) {
-        return false;
+    public static boolean isPaymentTypeValid(String type) {
+        return (type.equalsIgnoreCase("cash") || type.equalsIgnoreCase("credit") || type.equalsIgnoreCase("debit"));
     }
-
-    public static boolean isValidDate(LocalDate date) {
-        return date != null && !date.isBefore(LocalDate.now());
-    }
-
-    public static boolean isValidTime(LocalTime time) {
-        return time != null && time.isAfter(LocalTime.MIN) && time.isBefore(LocalTime.MAX);
-    }
-    public static boolean isAgeValid(int i) {return i > 0;}
 
 }
 

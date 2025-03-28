@@ -1,4 +1,8 @@
-// Athenkosi Mekana 222319437
+/* VeterinarianFactory.java
+Veterinarian factory class
+Author: Athenkosi Mekana(222319437)
+Date: 28 March 2025
+ */
 
 
 package za.ac.cput.factory;
