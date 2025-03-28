@@ -8,7 +8,7 @@ import za.ac.cput.util.Helper;
 import java.util.ArrayList;
 
 public class PetFactory {
-  public static Pet createPet(Owner owner,
+  public static Pet createPet(String owner,
                               String name,
                               String breed,
                               String species,

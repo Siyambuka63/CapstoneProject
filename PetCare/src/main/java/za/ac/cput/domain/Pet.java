@@ -3,7 +3,7 @@ package za.ac.cput.domain;
 import java.util.ArrayList;
 
 public class Pet {
-    private  Owner owner;
+    private  String owner;
     private  String name;
     private  String breed;
     private  String species;
@@ -23,7 +23,7 @@ public class Pet {
       this.medicalHistory = builder.medicalHistory;
     }
 
-    public Owner getOwner() {
+    public String getOwner() {
         return owner;
     }
 
@@ -60,13 +60,13 @@ public class Pet {
     }
 
     public static class Builder{
-        private  Owner owner;
+        private  String owner;
         private  String name;
         private  String breed;
         private  String species;
         private  int age;
         private  ArrayList<MedicalRecord> medicalHistory;
-        public Builder setOwner(Owner owner) {
+        public Builder setOwner(String owner) {
             this.owner = owner;
             return this;
         }

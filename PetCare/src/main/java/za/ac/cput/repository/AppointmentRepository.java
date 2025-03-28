@@ -1,6 +1,7 @@
-/*package za.ac.cput.repository;
+package za.ac.cput.repository;
 
 import za.ac.cput.domain.Appointment;
+import za.ac.cput.domain.Payment;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -33,9 +34,9 @@ public class AppointmentRepository implements IRepository<Appointment, String>{
     }
 
     @Override
-    public Appointment read(LocalDate Date) {
+    public Appointment read(String Urgency) {
         for (Appointment appointment : appointments) {
-            if(appointment.getDate().equals(Date)) {
+            if(appointment.getUrgency().equals(Urgency)) {
                 return appointment;
             }
         }
@@ -44,16 +45,25 @@ public class AppointmentRepository implements IRepository<Appointment, String>{
 
     @Override
     public Appointment update(Appointment appointment) {
+        Appointment oldAppointment = read(appointment.getUrgency());
+        if (oldAppointment != null) {
+            return appointment;
+        }
         return null;
     }
 
     @Override
-    public Appointment delete(String s) {
+    public Appointment delete(String Urgency) {
+        Appointment appointment = read(Urgency);
+        if (appointment != null) {
+            appointments.remove(appointment);
+            return appointment;
+        }
         return null;
     }
 
     @Override
     public List<Appointment> getAll() {
-        return List.of();
+        return appointments;
     }
-}*/
+}
