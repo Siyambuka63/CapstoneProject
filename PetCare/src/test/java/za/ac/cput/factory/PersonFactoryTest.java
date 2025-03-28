@@ -8,26 +8,23 @@ package za.ac.cput.factory;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+import za.ac.cput.domain.Address;
+import za.ac.cput.domain.Contact;
 import za.ac.cput.domain.Person;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class PersonFactoryTest {
+    private Contact contact = ContactFactory.createContact("0836431131", "angu@gmail.com");
+    private Address address = AddressFactory.createAddress(123, "Spin St", "Cape Town", "Western Cape", "8000");
+    private Person personWithoutName = PersonFactory.createPerson("", contact, address);
+    private Person personWithoutContact = PersonFactory.createPerson("Joe", null, address);
+    private Person personWithoutAddress = PersonFactory.createPerson("Joe", contact, null);
 
     //TODO add value for contact and address
-    private Person personWithoutName = PersonFactory.createPerson("", null, null);
-
-    //TODO add value for address
-    private Person personWithoutContact = PersonFactory.createPerson("Joe", null, null);
-
-    //TODO add value for contact
-    private Person personWithoutAddress = PersonFactory.createPerson("Joe", null, null);
-
-    //TODO add value for contact and address
-    private Person person = PersonFactory.createPerson("Joe", null, null);
+    private Person person = PersonFactory.createPerson("Joe", contact, address);
 
     @Test
-    @Disabled
     void testCreatePerson() {
         assertNotNull(person);
         System.out.println(person);
@@ -47,7 +44,6 @@ class PersonFactoryTest {
     }
 
     @Test
-    @Disabled
     void testCreatePersonWithoutAddress() {
         assertNotNull(personWithoutAddress);
         System.out.println(personWithoutAddress);

@@ -7,7 +7,7 @@ Date: 28 March 2025
 package za.ac.cput.domain;
 import java.util.List;
 
-public class Veterinarian {
+public class Veterinarian extends Person {
 
     private int veterinarianId;
 

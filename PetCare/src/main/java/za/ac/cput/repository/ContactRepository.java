@@ -34,9 +34,9 @@ public class ContactRepository implements IRepository<Contact, String> {
     }
 
     @Override
-    public Contact read(String contactId) {
+    public Contact read(String number) {
         for (Contact contact : contacts) {
-            if (contact.getContactId().equals(contactId)) {
+            if (contact.getPhoneNumber().equals(number)) {
                 return contact;
             }
         }
@@ -45,11 +45,11 @@ public class ContactRepository implements IRepository<Contact, String> {
 
     @Override
     public Contact update(Contact contact) {
-        Contact oldContact = read(contact.getContactId());
+        Contact oldContact = read(contact.getPhoneNumber());
         if (oldContact == null) {
             return null;
         }
-        Contact deletedContact = delete(oldContact.getContactId());
+        Contact deletedContact = delete(oldContact.getPhoneNumber());
         if (deletedContact == null) {
             return null;
         }
@@ -57,8 +57,8 @@ public class ContactRepository implements IRepository<Contact, String> {
     }
 
     @Override
-    public Contact delete(String contactId) {
-        Contact contact = read(contactId);
+    public Contact delete(String phoneNumber) {
+        Contact contact = read(phoneNumber);
         if (contact == null) {
             return null;
         }

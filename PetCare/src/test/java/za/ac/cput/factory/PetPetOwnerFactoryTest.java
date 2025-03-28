@@ -1,15 +1,11 @@
 package za.ac.cput.factory;
 
 import org.junit.jupiter.api.Test;
-import za.ac.cput.domain.Owner;
 
 import java.util.ArrayList;
 import java.util.List;
 
-
-import static org.junit.jupiter.api.Assertions.*;
-
-class OwnerFactoryTest {
+class PetPetOwnerFactoryTest {
     List<String> pets = new ArrayList<>();
 
     @Test

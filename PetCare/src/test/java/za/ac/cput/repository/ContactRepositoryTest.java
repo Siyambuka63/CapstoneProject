@@ -32,9 +32,9 @@ class ContactRepositoryTest {
     @Order(2)
     void read() {
         assertNotNull(contact, "Contact must be created first before reading.");
-        Contact readContact = contactRepository.read(contact.getContactId());
+        Contact readContact = contactRepository.read(contact.getPhoneNumber());
         assertNotNull(readContact);
-        assertEquals(contact.getContactId(), readContact.getContactId());
+        assertEquals(contact.getPhoneNumber(), readContact.getPhoneNumber());
         System.out.println("Read Contact: " + readContact);
     }
 
@@ -43,7 +43,6 @@ class ContactRepositoryTest {
     void update() {
         assertNotNull(contact, "Contact must be created first before updating.");
         Contact updatedContact = new Contact.Builder()
-                .setContactId(contact.getContactId())
                 .setPhoneNumber("0836431131")
                 .setEmail("angu@gmail.com.com")
                 .build();
@@ -57,7 +56,7 @@ class ContactRepositoryTest {
     @Order(4)
     void delete() {
         assertNotNull(contact, "Contact must be created first before delete is called.");
-        Contact deletedContact = contactRepository.delete(contact.getContactId());
+        Contact deletedContact = contactRepository.delete(contact.getPhoneNumber());
         assertNotNull(deletedContact, "Contact deletion failed. Contact could not be found or deleted.");
         System.out.println("Deleted Contact: " + deletedContact);
     }
