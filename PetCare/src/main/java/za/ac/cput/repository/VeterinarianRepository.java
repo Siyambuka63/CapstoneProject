@@ -1,3 +1,12 @@
+/* VeterinarianTRepository.java
+Veterinarian repository class
+Author: Athenkosi Mekana(222319437)
+Date: 28 March 2025
+ */
+
+
+
+
 package za.ac.cput.repository;
 
 import za.ac.cput.domain.Veterinarian;
