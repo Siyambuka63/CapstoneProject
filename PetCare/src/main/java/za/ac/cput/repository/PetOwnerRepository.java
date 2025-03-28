@@ -1,29 +1,28 @@
 package za.ac.cput.repository;
 
-import za.ac.cput.domain.Owner;
-import za.ac.cput.domain.Person;
+import za.ac.cput.domain.PetOwner;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class OwnerRepository  implements IRepository<Owner, String> {
-    private static OwnerRepository pets = null;
+public class PetOwnerRepository implements IRepository<PetOwner, String> {
+    private static PetOwnerRepository pets = null;
 
-    private List<Owner> petList;
+    private List<PetOwner> petList;
 
-    private OwnerRepository() {
-        petList = new ArrayList<Owner>();
+    private PetOwnerRepository() {
+        petList = new ArrayList<PetOwner>();
     }
 
-    public static OwnerRepository getRepository() {
+    public static PetOwnerRepository getRepository() {
         if (pets == null) {
-            pets = new OwnerRepository();
+            pets = new PetOwnerRepository();
         }
         return pets;
     }
 
     @Override
-    public Owner create(Owner pets) {
+    public PetOwner create(PetOwner pets) {
         boolean success = petList.add(pets);
         if (petList.add(pets)) {
             return pets;
@@ -32,9 +31,9 @@ public class OwnerRepository  implements IRepository<Owner, String> {
     }
 
     @Override
-    public Owner read(String id) {
-        for (Owner pet : petList) {
-            if (pet.getIndex().equals(id)) {
+    public PetOwner read(String name) {
+        for (PetOwner pet : petList) {
+            if (pet.getName().equals(name)) {
                 return pet;
             }
         }
@@ -42,9 +41,9 @@ public class OwnerRepository  implements IRepository<Owner, String> {
     }
 
     @Override
-    public Owner update(Owner pets) {
-        String id = pets.getIndex();
-        Owner oldPet = read(id);
+    public PetOwner update(PetOwner pets) {
+        String name = pets.getName();
+        PetOwner oldPet = read(name);
         if (oldPet == null)
             return null;
 
@@ -57,8 +56,8 @@ public class OwnerRepository  implements IRepository<Owner, String> {
     }
 
     @Override
-    public Owner delete(String id) {
-        Owner pets = read(id);
+    public PetOwner delete(String name) {
+        PetOwner pets = read(name);
         if (pets == null) {
             return null;
         }
@@ -69,7 +68,7 @@ public class OwnerRepository  implements IRepository<Owner, String> {
     }
 
     @Override
-    public List<Owner> getAll() {
+    public List<PetOwner> getAll() {
         return petList;
     }
 

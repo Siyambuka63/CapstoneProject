@@ -6,14 +6,16 @@ Date: 23 March 2025
 
 package za.ac.cput.domain;
 
+import java.util.List;
+
 public class Person {
-    private String name;
-    private Contact contact;
-    private Address address;
+    protected String name;
+    protected Contact contact;
+    protected Address address;
 
-    private Person(){}
+    protected Person(){}
 
-    private Person(Builder builder) {
+    protected Person(Builder builder) {
         this.name = builder.name;
         this.contact = builder.contact;
         this.address = builder.address;
@@ -33,9 +35,9 @@ public class Person {
 
     // Builder Class
     public static class Builder {
-        private String name;
-        private Contact contact;
-        private Address address;
+        protected String name;
+        protected Contact contact;
+        protected Address address;
 
         public Builder setName(String name) {
             this.name = name;

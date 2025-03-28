@@ -7,7 +7,11 @@ Date: 23 March 2025
 package za.ac.cput.repository;
 
 import org.junit.jupiter.api.*;
+import za.ac.cput.domain.Address;
+import za.ac.cput.domain.Contact;
 import za.ac.cput.domain.Person;
+import za.ac.cput.factory.AddressFactory;
+import za.ac.cput.factory.ContactFactory;
 import za.ac.cput.factory.PersonFactory;
 
 import java.util.List;
@@ -19,12 +23,12 @@ class PersonRepositoryTest {
 
     private static PersonRepository personRepository = PersonRepository.getRepository();
 
-    //ToDo Add contact and address
-    private static Person person = PersonFactory.createPerson("Joe", null, null);
+    private static Contact contact = ContactFactory.createContact("0836431131", "angu@gmail.com");
+    private static Address address = AddressFactory.createAddress(123, "Spin St", "Cape Town", "Western Cape", "8000");
+    private static Person person = PersonFactory.createPerson("Joe", contact, address);
 
     @Test
     @Order(1)
-    @Disabled
     void create() {
         Person createdPerson = personRepository.create(person);
         assertNotNull(createdPerson);
@@ -33,7 +37,6 @@ class PersonRepositoryTest {
 
     @Test
     @Order(2)
-    @Disabled
     void read() {
         Person readPerson = personRepository.read(person.getName());
         assertNotNull(readPerson);
@@ -42,10 +45,9 @@ class PersonRepositoryTest {
 
     @Test
     @Order(3)
-    @Disabled
     void update() {
-        //ToDo Change Contact or Address
-        Person newPerson = PersonFactory.createPerson("Joe", null, null);
+        Contact newContact = ContactFactory.createContact("0987654321", "person@gmail.com");
+        Person newPerson = PersonFactory.createPerson("Joe", newContact, address);
         Person updatedPerson = personRepository.update(newPerson);
         assertNotNull(updatedPerson);
         System.out.println(updatedPerson);
@@ -53,7 +55,6 @@ class PersonRepositoryTest {
 
     @Test
     @Order(4)
-    @Disabled
     void delete() {
         Person deletedPerson = personRepository.delete(person.getName());
         assertNotNull(deletedPerson);
@@ -62,7 +63,6 @@ class PersonRepositoryTest {
 
     @Test
     @Order(5)
-    @Disabled
     void getAll() {
         List<Person> personList = personRepository.getAll();
         assertNotNull(personList);
