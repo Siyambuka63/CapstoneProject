@@ -9,14 +9,14 @@ import za.ac.cput.util.Helper;
 import java.util.List;
 
 public class PetOwnerFactory {
-        public static PetOwner createPets(String name, Contact contact, Address address, List<Pet> pets) {
+    public static PetOwner createPets(String name, Contact contact, Address address, List<Pet> pets) {
 
-            return (PetOwner) new PetOwner.Builder().setPets(pets).
-                    setName(name).
-                    setContact(contact).
-                    setAddress(address).
-                    build();
-        }
+        return (PetOwner) new PetOwner.Builder().setPets(pets).
+                setName(name).
+                setContact(contact).
+                setAddress(address).
+                build();
     }
+}
 
 
