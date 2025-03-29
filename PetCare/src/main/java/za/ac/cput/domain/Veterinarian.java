@@ -9,7 +9,7 @@ import java.util.List;
 
 public class Veterinarian extends Person {
 
-    private int veterinarianId;
+    private String veterinarianId;
 
     private List appointments;
 
@@ -20,7 +20,7 @@ public class Veterinarian extends Person {
         this.appointments = builder.appointments;
 
 }
-public int getVeterinarianId() {
+public String getVeterinarianId() {
     return veterinarianId;
 }
 
@@ -35,12 +35,12 @@ public int getVeterinarianId() {
                 ", appointments=" + appointments +
                 '}';
     }
-    public static class Builder {
-        private int veterianrianId;
+    public static class Builder extends Person.Builder {
+        private String veterianrianId;
         private List appointments;
 
 
-        public Builder setVeterinarianId(int veterinarianId) {
+        public Builder setVeterinarianId(String veterinarianId) {
             this.veterianrianId = veterinarianId;
             return this;
         }
@@ -52,6 +52,9 @@ public int getVeterinarianId() {
         }
 
         public Builder copy(Veterinarian veterinarian) {
+            this.name = veterinarian.getName();
+            this.contact = veterinarian.getContact();
+            this.address = veterinarian.getAddress();
             this.veterianrianId = veterinarian.veterinarianId;
             this.appointments = veterinarian.appointments;
             return this;
