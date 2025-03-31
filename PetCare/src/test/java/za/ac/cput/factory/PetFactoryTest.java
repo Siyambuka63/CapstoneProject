@@ -20,13 +20,19 @@ Date: 28 March 2025
 class PetFactoryTest {
     ArrayList<MedicalRecord> medicalList = new ArrayList<>(Collections.singletonList(
             MedicalRecordFactory.createMedicalRecord("Tuberculosis", "Antibiotics tablet")));
-    private Pet petWithoutName = PetFactory.createPet(null,"Jimmy","Pitbull","Canine",3,medicalList);
-    private Pet petWithoutBreed = PetFactory.createPet(null,"Jimmy","Pitbull","Canine",3,medicalList);
-    private Pet petWithoutSpecies = PetFactory.createPet(null,"Jimmy","Pitbull","Canine",3,medicalList);
-    private Pet petWithoutAge = PetFactory.createPet(null,"Jimmy","Pitbull","Canine",0,medicalList);
-    private Pet petWithoutMedicalRecord = PetFactory.createPet(null,"Jimmy","Pitbull","Canine",0,null);
-    private Pet pet = PetFactory.createPet(null,"Jimmy","Pitbull","Canine",3,medicalList);
+    Owner owner = OwnerFactory.createPets("Dog");
+    private Pet petWithoutOwner = PetFactory.createPet(null,"Jimmy","Pitbull","Canine",3,medicalList);
+    private Pet petWithoutName = PetFactory.createPet(owner,"Jimmy","Pitbull","Canine",3,medicalList);
+    private Pet petWithoutBreed = PetFactory.createPet(owner,"Jimmy","Pitbull","Canine",3,medicalList);
+    private Pet petWithoutSpecies = PetFactory.createPet(owner,"Jimmy","Pitbull","Canine",3,medicalList);
+    private Pet petWithoutAge = PetFactory.createPet(owner,"Jimmy","Pitbull","Canine",0,medicalList);
+    private Pet petWithoutMedicalRecord = PetFactory.createPet(owner,"Jimmy","Pitbull","Canine",0,null);
+    private Pet pet = PetFactory.createPet(owner,"Jimmy","Pitbull","Canine",3,medicalList);
     @Test
+    void createPetWithoutOwner() {
+        assertNotNull(petWithoutOwner);
+        System.out.println(petWithoutOwner);
+    }  @Test
     void createPetWithoutName() {
         assertNotNull(petWithoutName);
         System.out.println(petWithoutName);
