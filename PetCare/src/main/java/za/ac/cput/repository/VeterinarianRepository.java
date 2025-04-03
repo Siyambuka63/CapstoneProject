@@ -53,7 +53,7 @@ public class VeterinarianRepository implements IRepository<Veterinarian, String>
         if (previousVeterinarian == null) {
             return null;
         }
-        // Optionally delete and create again, but it's better to modify the object directly
+        
         veterinarians.remove(previousVeterinarian);
         veterinarians.add(veterinarian);
         return veterinarian;
